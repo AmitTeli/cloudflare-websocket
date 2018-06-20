@@ -10,7 +10,7 @@ var credentials = {key: privateKey, cert: certificate};
 var app = express()
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/ws.html');
+    res.sendFile(__dirname + '/frontend.html');
 })
 
 //Please note that cloudflare has specific ports for http and https connections
@@ -34,7 +34,7 @@ wss.on('connection', function (ws) {
   });
 
   setInterval(
-    () => ws.send(`${new Date()}`),
+    () => ws.send('New messege from server on -- '+`${new Date()}`),
     2000
   );
 });

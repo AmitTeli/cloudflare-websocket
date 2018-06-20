@@ -1,0 +1,27 @@
+<h1>
+    Web Socket Example
+</h1>
+<p>
+    Messages.
+    <div id="messageDiv">
+
+    </div>
+</p>
+<script>
+    var hostName = window.location.hostname; //Connect with same host on wss
+    var ws = new WebSocket('wss://'+hostName+':2083');
+
+    var appendMessage = function(mesg){
+        var msgDiv = document.getElementById("messageDiv");
+        msgDiv.innerHTML = msgDiv.innerHTML+"<p>"+ mesg+"</p>";
+    };
+    ws.onopen = function () {
+        appendMessage("Opened Connection");
+        ws.send('connected');
+    }
+
+    ws.onmessage = function (ev) {
+        console.log(ev);
+        appendMessage(ev.data);
+    }
+</script>
