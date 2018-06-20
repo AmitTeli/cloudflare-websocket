@@ -6,7 +6,9 @@ However there are certain finer details not well documented.
 
 The most important one is you must serve websocket on SSL.
 
-This sample project helps undertand step by step process to deploy an example solution.
+This sample project helps understand step by step process to deploy an example solution.
+
+**STEPS**
 
 1. From the **network** menu on your cloudflare dashboard for  the domain, ensure that WebSockets are enabled (by default it is enabled)
 
