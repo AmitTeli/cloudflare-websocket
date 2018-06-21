@@ -32,4 +32,4 @@ This sample project helps understand step by step process to deploy an example s
 
 5. now from the browser access https://mywsproject.maymaindomain.com, you should see the messages sent from the server.
 
-The websocket on SSL code works without cloudflare as well as long as you provide correct ssl certificates for your domain name.
+This websocket example on SSL code works without cloudflare as well as long as you provide correct ssl certificates for your domain name.
