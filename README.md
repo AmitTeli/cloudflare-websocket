@@ -25,6 +25,8 @@ This sample project helps understand step by step process to deploy an example s
     copy the **server.crt** and **server.key** files to **cloudflare-websocket/sslcert** subfolder
 
     run `npm start`
+    
+    Ensure that required ports(8443 and 2083 in this case) are accessible in EC2 security policy.
 
 4. On cloudflare **dns**, add a cname/A entry for your EC2 instance **ec2-myec2instance.myregion.compute.amazonaws.com**, say **mywsproject**
 
